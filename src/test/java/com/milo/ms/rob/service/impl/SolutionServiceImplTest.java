@@ -15,12 +15,20 @@ class SolutionServiceImplTest {
     SolutionService solutionService;
 
     @Test
-    void test() {
+    void testCase1() {
         Integer[] values = {2, 7, 9, 3, 1};
-        var expected = -1;
+        var expected = 12;
         var actual = assertDoesNotThrow(() -> solutionService.rob(values));
 
-        assertAll(() -> assertEquals(expected, actual));
+        assertEquals(expected, actual);
+    }
+    @Test
+    void testCase2() {
+        Integer[] values = {1,2,3,1};
+        var expected = 4;
+        var actual = assertDoesNotThrow(() -> solutionService.rob(values));
+
+        assertEquals(expected, actual);
     }
 
 }
